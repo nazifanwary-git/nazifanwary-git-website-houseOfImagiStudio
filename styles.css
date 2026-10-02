@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --hoi-primary: #FFE200;
+    --hoi-dark: #DBBF00;
+    --hoi-light: #FFF166;
+    --transition: all 0.3s linear;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+}
+
+/* navbar */
+
+nav {
+    background-color: var(--hoi-primary);
+    padding: 1.6rem;
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 7.2rem;
+    height: 3.2rem;
+    transition: var(--transition);
+}
+
+.nav-toggle {
+    font-size: 3.2rem;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 1.6rem;
+}
+
+.links a {
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.links li:hover {
+    background-color: var(--hoi-light);
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* hero */
+
+.banner {
+    background: linear-gradient(rgba(248, 255, 47, 0.5), rgba(0, 0, 0, 0.7)),
+        url(./images/hoiHeroBanner.png) center/cover no-repeat;
+    min-height: 90vh;
+    position: relative;
+    background-position: 25% 0;
+}
+
+/* rgba(63, 208, 212, 0.5) */
+
+.banner-container {
+    max-width: 38.2rem;
+    width: 73.821%;
+    position: absolute;
+    bottom: 30%;
+    right: 12.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    transition: var(--transition);
+}
+
+.hero-logo {
+    height: 184px;
+}
+
+.banner-container p {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+/* main */
+
+.section {
+    padding: 2.4rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 24px;
+}
+
+.deco-line {
+    max-width: 405rem;
+    width: 70%;
+}
+
+.section-header h1 {
+    color: #ffffff;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* about me */
+
+#about .section-content p {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* our services */
+
+/* #services .section-header {
+    align-items: end;
+} */
+
+#services .section-content {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    list-style-position: inside;
+}
+
+/* testimonials */
+
+#testimonials .section-content {
+    color: #ffffff;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimony-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimony-header {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.testimony-user {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.testimony-separator {
+    width: 2px;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.testimony-rating {
+    font-size: 1.6rem;
+}
+
+.testimony-content {
+    font-size: 1.6rem;
+}
+
+/* our works */
+
+.works-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.works-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.works-sub-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.separator-yellow {
+    height: 8px;
+    width: 30%;
+    background-color: var(--hoi-primary);
+}
+
+.works-sub-header h4 {
+    color: var(--hoi-primary);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.works-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.works-image-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.works-image-desc p {
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--hoi-primary);
+    padding: 0.8rem 1.6rem;
+}
+
+footer p {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* back to top btn */
+
+.back-to-top-link {
+    font-size: 3.6rem;
+    position: fixed;
+    right: 4.8rem;
+    bottom: 4.8rem;
+    text-decoration: none;
+    color: #ffffff;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+/* lightbox */
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+@media screen and (min-width: 900px) {
+
+    /* nav */
+
+    nav {
+        padding: 0;
+    }
+
+    .nav-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .nav-header {
+        padding: 1.6rem 0;
+    }
+
+    .logo {
+        height: 100%;
+        transition: var(--transition);
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links-container {
+        height: auto !important;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .links a {
+        font-size: 2.4rem;
+    }
+
+    .links li:hover {
+        background-color: transparent;
+    }
+
+    /* hero */
+
+    .banner-container {
+        bottom: 20%;
+        right: 16%;
+        transition: var(--transition);
+    }
+
+    .hero-logo {
+        height: 259px;
+        transition: var(--transition);
+    }
+
+    .banner-container p {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        transition: var(--transition);
+    }
+
+
+    /* main */
+
+    .deco-line {
+        max-width: 40.5rem;
+    }
+
+    /* our works */
+
+    .works-image-container {
+        flex-direction: row;
+    }
+
+    .works-image-container img {
+        flex: 1;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
